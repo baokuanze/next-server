@@ -20,7 +20,7 @@
   "homepage": "https://github.com/baokuanze/next-server#readme",
   "dependencies": {
     "@vercel/node": "^1.15.0",
-    "koa": "^2.13.4",
-    "nodemon": "^2.0.16"
+    "express": "^4.18.1",
+    "pm2": "^5.2.0"
   }
 }

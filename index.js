@@ -1,13 +1,33 @@
+const express = require('express')
+const app = express()
+const port = 3003
+
+app.get('/list', (req, res) => {
+  res.status(200).json({
+    result: {
+      data: [{
+        id: '123',
+        name: '123 test'
+      }, {
+        id: '456',
+        name: '456 tests'
+      },  {
+        id: '789',
+        name: '789 tests'
+      }]
+    }
+  })
+})
 
 
-const Koa = require('koa');
-const app = new Koa();
+app.get('/detail', (req, res) => {
+  res.status(200).json({
+    result: {
+      data: '这是测试details'
+    }
+  })
+})
 
-app.use(async ctx => {
-    ctx.body = 'Hello Vercel, Hi Koa2';
-});
-
-
-app.listen(3008, () => {
-    console.log('3008项目启动')
-});
+app.listen(3003, () => {
+  console.log(`Example app listening on port ${port}`)
+})
