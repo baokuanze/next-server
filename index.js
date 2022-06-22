@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3003
 
-app.get('/list', (req, res) => {
+app.get('/api/list', (req, res) => {
   res.status(200).json({
     result: {
       data: [{
@@ -20,7 +20,7 @@ app.get('/list', (req, res) => {
 })
 
 
-app.get('/detail', (req, res) => {
+app.get('/api/detail', (req, res) => {
   res.status(200).json({
     result: {
       data: '这是测试details'
