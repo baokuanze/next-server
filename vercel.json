@@ -2,7 +2,7 @@
 {
   "builds": [
     {
-      "src": "api/*",
+      "src": "api/",
       "use": "@vercel/node"
     }
   ],
