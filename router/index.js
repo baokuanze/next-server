@@ -1,7 +1,7 @@
 
 
 const router = require('koa-router')();
-router.get('/list', function (ctx) {
+router.get('/api/list', function (ctx) {
   ctx.body = {
     result: {
       data: [{
@@ -21,7 +21,7 @@ router.get('/list', function (ctx) {
   }
 })
 
-router.get('/details', function (ctx) {
+router.get('/api/details', function (ctx) {
   ctx.body = {
     result: {
       data: '这是测试details2'
