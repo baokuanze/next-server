@@ -3,7 +3,7 @@
 const express = require('express')
 const Routers = require('./router/index')
 
-
+//  // "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
 const port = parseInt(process.env.PORT, 10) || 3002
 const app = express()
 
