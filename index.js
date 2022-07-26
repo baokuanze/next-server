@@ -1,34 +1,7 @@
 const Koa = require('koa');
-const _ = require('koa-router')();
-_.get('/list', function (ctx) {
-  ctx.body = {
-    result: {
-      data: [{
-        id: '123',
-        name: '12345 test'
-      }, {
-        id: '456',
-        name: '456 tests'
-      }, {
-        id: '789',
-        name: '789 tests'
-      }, {
-        id: '789',
-        name: '789 tests'
-      }]
-    }
-  }
-})
-
-_.get('/details', function (ctx) {
-  ctx.body = {
-    result: {
-      data: '这是测试details2'
-    }
-  }
-})
-
+const _ = require('./router/index.js')
 const app = new Koa();
+
 app.use(_.routes())
 
 app.use(async ctx => {
