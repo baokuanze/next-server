@@ -2,7 +2,7 @@ const Koa = require('koa');
 const _ = require('./router/index.js')
 const app = new Koa();
 
-app.use(_.routes())
+app.use('/api', _.routes())
 
 app.use(async ctx => {
   console.log(ctx, ctx.request.url)
