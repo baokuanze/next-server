@@ -6,7 +6,7 @@ const app = new Koa();
 app.use(_.routes())
 
 app.use(async ctx => {
-  ctx.body = '@泽';
+  ctx.body = '@泽 ! ! !';
 });
 
 app.listen(3008, () => {
