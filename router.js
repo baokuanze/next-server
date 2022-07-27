@@ -1,8 +1,8 @@
 
 
 const router = require('koa-router')();
-const NvList = require('./db/nvList')
-const dbOperate = require('./db/operate')
+const NvList = require('./db_c/nvList')
+const dbOperate = require('./db_c/operate')
 
 router.get('/api/allNvList', async (ctx) => {
   let list = await dbOperate.find(NvList)
