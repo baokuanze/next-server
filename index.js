@@ -1,6 +1,6 @@
 const Koa = require('koa');
 const _ = require('./router.js')
-// const mongo = require('./db/index.js')
+const mongo = require('./db/index.js')
 const app = new Koa();
 
 app.use(_.routes())
