@@ -1,9 +1,11 @@
  const mongoose = require('mongoose')
- const DB_URL = 'mongodb+srv://bao:asdbkz1234.as@cluster0.yxcw9.mongodb.net?retryWrites=true&w=majority'
+ const DB_URL = 'mongodb+srv://bao:asdbkz1234.as@cluster0.yxcw9.mongodb.net/recode?retryWrites=true&w=majority'
  // 开始连接
  mongoose.connect(DB_URL, {
    useNewUrlParser: true,
-   useUnifiedTopology: true
+   useUnifiedTopology: true,
+   serverSelectionTimeoutMS: 2000,
+   socketTimeoutMS: 4000
  })
  // 连接对象
  const db = mongoose.connection
